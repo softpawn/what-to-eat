@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="뭐해먹냐">
+  <meta name="theme-color" content="#FF6B35">
+  <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIuutkO2VtOuoueuDkD8iLCAic2hvcnRfbmFtZSI6ICLrrZDtlbTrqLnrg5AiLCAiZGVzY3JpcHRpb24iOiAi64OJ7J6l6rOgIOyerOujjOuhnCDsmKTripgg66mU64m0IOy2lOyynOuwm+q4sCIsICJzdGFydF91cmwiOiAiLiIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjRkY2QjM1IiwgInRoZW1lX2NvbG9yIjogIiNGRjZCMzUiLCAib3JpZW50YXRpb24iOiAicG9ydHJhaXQiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhacFpYZENiM2c5SWpBZ01DQTFNVElnTlRFeUlqNDhjbVZqZENCM2FXUjBhRDBpTlRFeUlpQm9aV2xuYUhROUlqVXhNaUlnY25nOUlqRXhNaUlnWm1sc2JEMGlJMFpHTmtJek5TSXZQanhsYkd4cGNITmxJR040UFNJeU16QWlJR041UFNJeU9EQWlJSEo0UFNJeE16QWlJSEo1UFNJeE1UQWlJR1pwYkd3OUlpTXlZVEZoTUdFaUx6NDhaV3hzYVhCelpTQmplRDBpTWpNd0lpQmplVDBpTWpnd0lpQnllRDBpTVRFMUlpQnllVDBpT1RZaUlHWnBiR3c5SWlNeFlUQm1NRFVpTHo0OFpXeHNhWEJ6WlNCamVEMGlNakUxSWlCamVUMGlNamM0SWlCeWVEMGlOekFpSUhKNVBTSTFPQ0lnWm1sc2JEMGlJMlptWmpsbU1DSXZQanhqYVhKamJHVWdZM2c5SWpJeE5TSWdZM2s5SWpJM01pSWdjajBpTWpnaUlHWnBiR3c5SWlOR1JrUTFORVlpTHo0OFkybHlZMnhsSUdONFBTSXlNRGdpSUdONVBTSXlOalVpSUhJOUlqZ2lJR1pwYkd3OUlpTkdSa1V3T0RJaUlHOXdZV05wZEhrOUlqQXVOeUl2UGp4eVpXTjBJSGc5SWpNMU5TSWdlVDBpTWpVNElpQjNhV1IwYUQwaU1UQXdJaUJvWldsbmFIUTlJakk0SWlCeWVEMGlNVFFpSUdacGJHdzlJaU15WVRGaE1HRWlMejQ4Y21WamRDQjRQU0l6TlRVaUlIazlJakkyTXlJZ2QybGtkR2c5SWpFd01DSWdhR1ZwWjJoMFBTSXhOQ0lnY25nOUlqY2lJR1pwYkd3OUlpTXpaREpoTVRRaUx6NDhMM04yWno0PSIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0OGNtVmpkQ0IzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdjbmc5SWpFeE1pSWdabWxzYkQwaUkwWkdOa0l6TlNJdlBqeGxiR3hwY0hObElHTjRQU0l5TXpBaUlHTjVQU0l5T0RBaUlISjRQU0l4TXpBaUlISjVQU0l4TVRBaUlHWnBiR3c5SWlNeVlURmhNR0VpTHo0OFpXeHNhWEJ6WlNCamVEMGlNak13SWlCamVUMGlNamd3SWlCeWVEMGlNVEUxSWlCeWVUMGlPVFlpSUdacGJHdzlJaU14WVRCbU1EVWlMejQ4Wld4c2FYQnpaU0JqZUQwaU1qRTFJaUJqZVQwaU1qYzRJaUJ5ZUQwaU56QWlJSEo1UFNJMU9DSWdabWxzYkQwaUkyWm1aamxtTUNJdlBqeGphWEpqYkdVZ1kzZzlJakl4TlNJZ1kzazlJakkzTWlJZ2NqMGlNamdpSUdacGJHdzlJaU5HUmtRMU5FWWlMejQ4WTJseVkyeGxJR040UFNJeU1EZ2lJR041UFNJeU5qVWlJSEk5SWpnaUlHWnBiR3c5SWlOR1JrVXdPRElpSUc5d1lXTnBkSGs5SWpBdU55SXZQanh5WldOMElIZzlJak0xTlNJZ2VUMGlNalU0SWlCM2FXUjBhRDBpTVRBd0lpQm9aV2xuYUhROUlqSTRJaUJ5ZUQwaU1UUWlJR1pwYkd3OUlpTXlZVEZoTUdFaUx6NDhjbVZqZENCNFBTSXpOVFVpSUhrOUlqSTJNeUlnZDJsa2RHZzlJakV3TUNJZ2FHVnBaMmgwUFNJeE5DSWdjbmc5SWpjaUlHWnBiR3c5SWlNelpESmhNVFFpTHo0OEwzTjJaejQ9IiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9zdmcreG1sIn1dfQ==">
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iI0ZGNkIzNSIvPjxlbGxpcHNlIGN4PSIyMzAiIGN5PSIyODAiIHJ4PSIxMzAiIHJ5PSIxMTAiIGZpbGw9IiMyYTFhMGEiLz48ZWxsaXBzZSBjeD0iMjMwIiBjeT0iMjgwIiByeD0iMTE1IiByeT0iOTYiIGZpbGw9IiMxYTBmMDUiLz48ZWxsaXBzZSBjeD0iMjE1IiBjeT0iMjc4IiByeD0iNzAiIHJ5PSI1OCIgZmlsbD0iI2ZmZjlmMCIvPjxjaXJjbGUgY3g9IjIxNSIgY3k9IjI3MiIgcj0iMjgiIGZpbGw9IiNGRkQ1NEYiLz48Y2lyY2xlIGN4PSIyMDgiIGN5PSIyNjUiIHI9IjgiIGZpbGw9IiNGRkUwODIiIG9wYWNpdHk9IjAuNyIvPjxyZWN0IHg9IjM1NSIgeT0iMjU4IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjI4IiByeD0iMTQiIGZpbGw9IiMyYTFhMGEiLz48cmVjdCB4PSIzNTUiIHk9IjI2MyIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiMzZDJhMTQiLz48L3N2Zz4=">
+  <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iI0ZGNkIzNSIvPjxlbGxpcHNlIGN4PSIyMzAiIGN5PSIyODAiIHJ4PSIxMzAiIHJ5PSIxMTAiIGZpbGw9IiMyYTFhMGEiLz48ZWxsaXBzZSBjeD0iMjMwIiBjeT0iMjgwIiByeD0iMTE1IiByeT0iOTYiIGZpbGw9IiMxYTBmMDUiLz48ZWxsaXBzZSBjeD0iMjE1IiBjeT0iMjc4IiByeD0iNzAiIHJ5PSI1OCIgZmlsbD0iI2ZmZjlmMCIvPjxjaXJjbGUgY3g9IjIxNSIgY3k9IjI3MiIgcj0iMjgiIGZpbGw9IiNGRkQ1NEYiLz48Y2lyY2xlIGN4PSIyMDgiIGN5PSIyNjUiIHI9IjgiIGZpbGw9IiNGRkUwODIiIG9wYWNpdHk9IjAuNyIvPjxyZWN0IHg9IjM1NSIgeT0iMjU4IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjI4IiByeD0iMTQiIGZpbGw9IiMyYTFhMGEiLz48cmVjdCB4PSIzNTUiIHk9IjI2MyIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiMzZDJhMTQiLz48L3N2Zz4=">
+  <link rel="apple-touch-icon" sizes="152x152" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iI0ZGNkIzNSIvPjxlbGxpcHNlIGN4PSIyMzAiIGN5PSIyODAiIHJ4PSIxMzAiIHJ5PSIxMTAiIGZpbGw9IiMyYTFhMGEiLz48ZWxsaXBzZSBjeD0iMjMwIiBjeT0iMjgwIiByeD0iMTE1IiByeT0iOTYiIGZpbGw9IiMxYTBmMDUiLz48ZWxsaXBzZSBjeD0iMjE1IiBjeT0iMjc4IiByeD0iNzAiIHJ5PSI1OCIgZmlsbD0iI2ZmZjlmMCIvPjxjaXJjbGUgY3g9IjIxNSIgY3k9IjI3MiIgcj0iMjgiIGZpbGw9IiNGRkQ1NEYiLz48Y2lyY2xlIGN4PSIyMDgiIGN5PSIyNjUiIHI9IjgiIGZpbGw9IiNGRkUwODIiIG9wYWNpdHk9IjAuNyIvPjxyZWN0IHg9IjM1NSIgeT0iMjU4IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjI4IiByeD0iMTQiIGZpbGw9IiMyYTFhMGEiLz48cmVjdCB4PSIzNTUiIHk9IjI2MyIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiMzZDJhMTQiLz48L3N2Zz4=">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iI0ZGNkIzNSIvPjxlbGxpcHNlIGN4PSIyMzAiIGN5PSIyODAiIHJ4PSIxMzAiIHJ5PSIxMTAiIGZpbGw9IiMyYTFhMGEiLz48ZWxsaXBzZSBjeD0iMjMwIiBjeT0iMjgwIiByeD0iMTE1IiByeT0iOTYiIGZpbGw9IiMxYTBmMDUiLz48ZWxsaXBzZSBjeD0iMjE1IiBjeT0iMjc4IiByeD0iNzAiIHJ5PSI1OCIgZmlsbD0iI2ZmZjlmMCIvPjxjaXJjbGUgY3g9IjIxNSIgY3k9IjI3MiIgcj0iMjgiIGZpbGw9IiNGRkQ1NEYiLz48Y2lyY2xlIGN4PSIyMDgiIGN5PSIyNjUiIHI9IjgiIGZpbGw9IiNGRkUwODIiIG9wYWNpdHk9IjAuNyIvPjxyZWN0IHg9IjM1NSIgeT0iMjU4IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjI4IiByeD0iMTQiIGZpbGw9IiMyYTFhMGEiLz48cmVjdCB4PSIzNTUiIHk9IjI2MyIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiMzZDJhMTQiLz48L3N2Zz4=">
+  <link rel="shortcut icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iI0ZGNkIzNSIvPjxlbGxpcHNlIGN4PSIyMzAiIGN5PSIyODAiIHJ4PSIxMzAiIHJ5PSIxMTAiIGZpbGw9IiMyYTFhMGEiLz48ZWxsaXBzZSBjeD0iMjMwIiBjeT0iMjgwIiByeD0iMTE1IiByeT0iOTYiIGZpbGw9IiMxYTBmMDUiLz48ZWxsaXBzZSBjeD0iMjE1IiBjeT0iMjc4IiByeD0iNzAiIHJ5PSI1OCIgZmlsbD0iI2ZmZjlmMCIvPjxjaXJjbGUgY3g9IjIxNSIgY3k9IjI3MiIgcj0iMjgiIGZpbGw9IiNGRkQ1NEYiLz48Y2lyY2xlIGN4PSIyMDgiIGN5PSIyNjUiIHI9IjgiIGZpbGw9IiNGRkUwODIiIG9wYWNpdHk9IjAuNyIvPjxyZWN0IHg9IjM1NSIgeT0iMjU4IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjI4IiByeD0iMTQiIGZpbGw9IiMyYTFhMGEiLz48cmVjdCB4PSIzNTUiIHk9IjI2MyIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiMzZDJhMTQiLz48L3N2Zz4=">
+  <title>뭐해먹냐?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Gmarket+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #FF6B35;
+      --orange-light: #FF8C5A;
+      --orange-pale: #FFF0EA;
+      --brown: #3D1F0D;
+      --cream: #FFFBF7;
+      --gray: #8C7B70;
+      --gray-light: #F5EDE8;
+      --green: #4CAF7D;
+      --red: #E84855;
+      --border: #EBE0D8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: var(--cream);
+      color: var(--brown);
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      overflow-x: hidden;
+    }
+
+    /* ── SPLASH ── */
+    #splash {
+      position: fixed; inset: 0; z-index: 1000;
+      background: var(--orange);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      transition: opacity 0.6s ease;
+    }
+    #splash .logo-big {
+      font-family: 'Gmarket Sans', sans-serif;
+      font-size: 2.8rem; font-weight: 700;
+      color: #fff; letter-spacing: -1px;
+      animation: popIn 0.5s ease 0.2s both;
+    }
+    #splash .sub { color: rgba(255,255,255,0.8); margin-top: 8px; font-size: 1rem; animation: popIn 0.5s ease 0.4s both; }
+    #splash .emoji { font-size: 4rem; margin-bottom: 16px; animation: bounce 1s ease infinite; }
+    @keyframes popIn { from { opacity:0; transform: scale(0.8) } to { opacity:1; transform: scale(1) } }
+    @keyframes bounce { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+
+    /* ── LAYOUT ── */
+    #app { display: none; flex-direction: column; min-height: 100vh; }
+    
+    /* ── HEADER ── */
+    header {
+      background: var(--orange);
+      padding: 16px 20px 20px;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 12px rgba(255,107,53,0.3);
+    }
+    .header-top { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Gmarket Sans', sans-serif; font-size: 1.5rem; font-weight: 700; color: #fff; }
+    .header-actions { display: flex; gap: 8px; }
+    .icon-btn {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.2); border: none;
+      color: #fff; font-size: 1.1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .icon-btn:active { background: rgba(255,255,255,0.35); }
+
+    /* meal type tabs */
+    .meal-tabs {
+      display: flex; gap: 6px; margin-top: 12px;
+      overflow-x: auto; scrollbar-width: none; padding-bottom: 2px;
+    }
+    .meal-tabs::-webkit-scrollbar { display: none; }
+    .meal-tab {
+      flex-shrink: 0; padding: 5px 12px; border-radius: 20px;
+      font-size: 0.8rem; font-weight: 500; cursor: pointer; border: none;
+      background: rgba(255,255,255,0.2); color: rgba(255,255,255,0.85);
+      transition: all 0.2s;
+    }
+    .meal-tab.active { background: #fff; color: var(--orange); font-weight: 700; }
+
+    /* ── MAIN ── */
+    main { flex: 1; padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+
+    /* ── SECTION CARD ── */
+    .card {
+      background: #fff; border-radius: 20px;
+      padding: 16px; box-shadow: 0 2px 12px rgba(61,31,13,0.06);
+      border: 1px solid var(--border);
+    }
+    .card-title {
+      font-size: 0.75rem; font-weight: 700; color: var(--gray);
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;
+    }
+
+    /* ── PERSON SELECTOR ── */
+    .person-row { display: flex; align-items: center; gap: 12px; }
+    .person-label { font-size: 0.95rem; flex: 1; }
+    .counter { display: flex; align-items: center; gap: 10px; }
+    .counter-btn {
+      width: 32px; height: 32px; border-radius: 50%;
+      border: 2px solid var(--orange); background: #fff;
+      color: var(--orange); font-size: 1.1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; transition: all 0.15s;
+    }
+    .counter-btn:active { background: var(--orange); color: #fff; }
+    .counter-num { font-size: 1.3rem; font-weight: 700; min-width: 24px; text-align: center; }
+
+    /* ── FRIDGE ── */
+    .fridge-section { display: flex; flex-direction: column; gap: 10px; }
+    .fridge-zone { }
+    .zone-header {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.85rem; font-weight: 700; margin-bottom: 8px;
+    }
+    .zone-badge {
+      padding: 2px 8px; border-radius: 10px; font-size: 0.72rem;
+      font-weight: 600;
+    }
+    .badge-cold { background: #E3F2FD; color: #1565C0; }
+    .badge-freeze { background: #E8EAF6; color: #283593; }
+
+    .ingredient-grid {
+      display: flex; flex-wrap: wrap; gap: 6px;
+    }
+    .ingredient-chip {
+      padding: 6px 12px; border-radius: 20px; font-size: 0.83rem;
+      border: 1.5px solid var(--border); background: #fff;
+      cursor: pointer; transition: all 0.15s; font-weight: 500;
+      user-select: none;
+    }
+    .ingredient-chip.selected {
+      background: var(--orange); border-color: var(--orange);
+      color: #fff; transform: scale(1.02);
+    }
+    .ingredient-chip.custom {
+      border-style: dashed; color: var(--gray);
+    }
+
+    /* custom input */
+    .add-ingredient-row {
+      display: flex; gap: 6px; margin-top: 6px;
+    }
+    .add-input {
+      flex: 1; padding: 7px 12px; border-radius: 20px;
+      border: 1.5px solid var(--border); font-size: 0.85rem;
+      font-family: inherit; outline: none; background: var(--gray-light);
+      transition: border 0.2s;
+    }
+    .add-input:focus { border-color: var(--orange); background: #fff; }
+    .add-btn {
+      padding: 7px 14px; border-radius: 20px;
+      background: var(--orange); color: #fff; border: none;
+      font-size: 0.85rem; font-weight: 700; cursor: pointer;
+    }
+
+    /* ── CTA BUTTON ── */
+    .cta-btn {
+      width: 100%; padding: 18px;
+      background: var(--orange); color: #fff; border: none;
+      border-radius: 20px; font-size: 1.1rem; font-weight: 700;
+      font-family: 'Gmarket Sans', sans-serif;
+      cursor: pointer; letter-spacing: -0.5px;
+      box-shadow: 0 4px 20px rgba(255,107,53,0.4);
+      transition: all 0.2s; position: relative; overflow: hidden;
+    }
+    .cta-btn:active { transform: scale(0.97); }
+    .cta-btn:disabled { background: #ccc; box-shadow: none; cursor: not-allowed; }
+    .cta-btn .btn-sub { font-size: 0.78rem; opacity: 0.85; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; }
+
+    /* ── RESULT PANEL ── */
+    #result-panel {
+      display: none; flex-direction: column; gap: 16px;
+    }
+    .result-header {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .result-title { font-family: 'Gmarket Sans', sans-serif; font-size: 1.2rem; font-weight: 700; }
+    .back-btn {
+      padding: 6px 14px; border-radius: 20px;
+      border: 1.5px solid var(--border); background: #fff;
+      font-size: 0.82rem; cursor: pointer; font-weight: 500;
+    }
+
+    /* menu card */
+    .menu-card {
+      background: #fff; border-radius: 20px;
+      border: 1.5px solid var(--border);
+      overflow: hidden; cursor: pointer;
+      box-shadow: 0 2px 10px rgba(61,31,13,0.05);
+      transition: all 0.2s;
+    }
+    .menu-card:active { transform: scale(0.98); }
+    .menu-card-header {
+      padding: 16px; display: flex; align-items: flex-start;
+      gap: 12px; border-bottom: 1px solid var(--border);
+    }
+    .menu-emoji { font-size: 2rem; }
+    .menu-info { flex: 1; }
+    .menu-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+    .menu-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .menu-tag {
+      font-size: 0.72rem; padding: 2px 7px; border-radius: 8px;
+      font-weight: 500;
+    }
+    .tag-time { background: var(--orange-pale); color: var(--orange); }
+    .tag-diff { background: #F0FFF4; color: var(--green); }
+    .tag-type { background: var(--gray-light); color: var(--gray); }
+
+    .menu-card-body { padding: 14px 16px; }
+    .recipe-steps { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .recipe-step {
+      display: flex; gap: 10px; align-items: flex-start;
+      font-size: 0.87rem; line-height: 1.5;
+    }
+    .step-num {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--orange); color: #fff; font-size: 0.7rem;
+      font-weight: 700; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+    }
+
+    .ingredients-used {
+      margin-top: 12px; padding-top: 10px;
+      border-top: 1px dashed var(--border);
+      font-size: 0.78rem; color: var(--gray);
+    }
+    .ingredients-used strong { color: var(--brown); }
+
+    /* ── LOADING ── */
+    .loading-wrap {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 40px 20px; gap: 16px;
+    }
+    .loading-pot { font-size: 3rem; animation: shake 0.5s ease infinite alternate; }
+    @keyframes shake { from { transform: rotate(-5deg) } to { transform: rotate(5deg) } }
+    .loading-text { font-size: 1rem; color: var(--gray); font-weight: 500; }
+    .loading-dots::after { content: ''; animation: dots 1.5s steps(4) infinite; }
+    @keyframes dots { 0%{content:''} 25%{content:'.'} 50%{content:'..'} 75%{content:'...'} }
+
+    /* ── HISTORY ── */
+    #history-panel { display: none; }
+    .history-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+    }
+    .history-item:last-child { border-bottom: none; }
+    .history-emoji { font-size: 1.4rem; }
+    .history-info { flex: 1; }
+    .history-name { font-size: 0.9rem; font-weight: 600; }
+    .history-date { font-size: 0.75rem; color: var(--gray); }
+    .history-del { color: var(--gray); font-size: 1rem; cursor: pointer; padding: 4px; }
+
+    /* ── SETTINGS PANEL ── */
+    #settings-panel { display: none; }
+
+    /* ── TOAST ── */
+    #toast {
+      position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(20px);
+      background: var(--brown); color: #fff; padding: 10px 20px;
+      border-radius: 20px; font-size: 0.85rem; opacity: 0;
+      transition: all 0.3s; z-index: 999; white-space: nowrap;
+    }
+    #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ── ERROR ── */
+    .error-box {
+      background: #FFF5F5; border: 1px solid #FED7D7;
+      border-radius: 16px; padding: 16px; text-align: center;
+      color: var(--red); font-size: 0.9rem;
+    }
+
+    /* ── API KEY SETUP ── */
+    #apikey-panel {
+      display: none; flex-direction: column; gap: 16px; padding: 20px;
+    }
+    .setup-title { font-family: 'Gmarket Sans', sans-serif; font-size: 1.4rem; font-weight: 700; text-align: center; }
+    .setup-desc { font-size: 0.88rem; color: var(--gray); text-align: center; line-height: 1.6; }
+    .api-input {
+      width: 100%; padding: 14px 16px; border-radius: 16px;
+      border: 1.5px solid var(--border); font-size: 0.9rem;
+      font-family: inherit; outline: none;
+      transition: border 0.2s;
+    }
+    .api-input:focus { border-color: var(--orange); }
+
+    /* selected count badge */
+    .selected-count {
+      font-size: 0.78rem; color: var(--orange); font-weight: 600;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- SPLASH -->
+<div id="splash">
+  <div class="emoji">🍳</div>
+  <div class="logo-big">뭐해먹냐?</div>
+  <div class="sub">오늘 냉장고 사정 알려줘</div>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <header>
+    <div class="header-top">
+      <div class="logo">🍳 뭐해먹냐?</div>
+      <div class="header-actions">
+        <button class="icon-btn" onclick="showHistory()" title="히스토리">📋</button>
+        <button class="icon-btn" onclick="showSettings()" title="설정">⚙️</button>
+      </div>
+    </div>
+    <div class="meal-tabs">
+      <button class="meal-tab active" data-meal="아침">🌅 아침</button>
+      <button class="meal-tab" data-meal="점심">☀️ 점심</button>
+      <button class="meal-tab" data-meal="저녁">🌙 저녁</button>
+      <button class="meal-tab" data-meal="간식">🍪 간식</button>
+      <button class="meal-tab" data-meal="야식">🌃 야식</button>
+      <button class="meal-tab" data-meal="술안주">🍺 술안주</button>
+    </div>
+  </header>
+
+  <main id="main-view">
+    <!-- 인원 -->
+    <div class="card">
+      <div class="card-title">👥 몇 명이야?</div>
+      <div class="person-row">
+        <div class="person-label">오늘 먹을 인원</div>
+        <div class="counter">
+          <button class="counter-btn" onclick="changePerson(-1)">−</button>
+          <div class="counter-num" id="person-count">2</div>
+          <button class="counter-btn" onclick="changePerson(1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 냉장실 -->
+    <div class="card">
+      <div class="card-title" style="display:flex;align-items:center;justify-content:space-between;">
+        <span>🧊 냉장실 재료 <span class="selected-count" id="cold-count"></span></span>
+        <button onclick="resetZone('cold')" style="font-size:0.75rem;padding:3px 10px;border-radius:12px;border:1px solid var(--border);background:#fff;color:var(--gray);cursor:pointer;">초기화</button>
+      </div>
+      <div class="fridge-section">
+        <div class="ingredient-grid" id="cold-grid"></div>
+        <div class="add-ingredient-row">
+          <input class="add-input" id="cold-input" placeholder="직접 입력..." maxlength="10">
+          <button class="add-btn" onclick="addCustom('cold')">추가</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 냉동실 -->
+    <div class="card">
+      <div class="card-title" style="display:flex;align-items:center;justify-content:space-between;">
+        <span>❄️ 냉동실 재료 <span class="selected-count" id="freeze-count"></span></span>
+        <button onclick="resetZone('freeze')" style="font-size:0.75rem;padding:3px 10px;border-radius:12px;border:1px solid var(--border);background:#fff;color:var(--gray);cursor:pointer;">초기화</button>
+      </div>
+      <div class="fridge-section">
+        <div class="ingredient-grid" id="freeze-grid"></div>
+        <div class="add-ingredient-row">
+          <input class="add-input" id="freeze-input" placeholder="직접 입력..." maxlength="10">
+          <button class="add-btn" onclick="addCustom('freeze')">추가</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <button class="cta-btn" id="suggest-btn" onclick="confirmMealTime()">
+      오늘 뭐 해먹을까? 🤔<br>
+      <span class="btn-sub">재료 선택 후 눌러봐</span>
+    </button>
+  </main>
+
+  <!-- RESULT -->
+  <main id="result-view" style="display:none;">
+    <div class="result-header">
+      <div class="result-title" id="result-title">오늘 추천 메뉴 🍽️</div>
+      <button class="back-btn" onclick="goBack()">← 다시</button>
+    </div>
+    <div id="result-content"></div>
+  </main>
+
+  <!-- HISTORY -->
+  <main id="history-view" style="display:none;" class="card">
+    <div class="result-header" style="margin-bottom:12px;">
+      <div class="result-title">📋 먹은 기록</div>
+      <button class="back-btn" onclick="goBack()">← 돌아가기</button>
+    </div>
+    <div id="history-list"></div>
+  </main>
+
+  <!-- SETTINGS -->
+  <main id="settings-view" style="display:none;" class="card">
+    <div class="result-header" style="margin-bottom:16px;">
+      <div class="result-title">⚙️ 설정</div>
+      <button class="back-btn" onclick="goBack()">← 돌아가기</button>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px;">
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div class="card-title">🧊 냉장실 재료 추가</div>
+        <div style="display:flex; gap:8px;">
+          <input id="new-cold-input" type="text" placeholder="예: 두부, 고추장..."
+            style="flex:1; padding:10px 14px; border:1.5px solid var(--border); border-radius:12px; font-size:0.9rem; font-family:inherit;">
+          <button onclick="addCustomIngredient('cold')"
+            style="padding:10px 16px; background:var(--orange); color:#fff; border:none; border-radius:12px; font-weight:700; cursor:pointer;">추가</button>
+        </div>
+        <div id="custom-cold-list" style="display:flex; flex-wrap:wrap; gap:6px;"></div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div class="card-title">❄️ 냉동실 재료 추가</div>
+        <div style="display:flex; gap:8px;">
+          <input id="new-freeze-input" type="text" placeholder="예: 냉동피자, 냉동고기..."
+            style="flex:1; padding:10px 14px; border:1.5px solid var(--border); border-radius:12px; font-size:0.9rem; font-family:inherit;">
+          <button onclick="addCustomIngredient('freeze')"
+            style="padding:10px 16px; background:var(--orange); color:#fff; border:none; border-radius:12px; font-weight:700; cursor:pointer;">추가</button>
+        </div>
+        <div id="custom-freeze-list" style="display:flex; flex-wrap:wrap; gap:6px;"></div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <div class="card-title">앱 정보</div>
+        <p style="font-size:0.82rem; color:var(--gray); line-height:1.6;">
+          🍳 뭐해먹냐? v2.0<br>냉장고 재료로 오늘 메뉴 추천 앱
+        </p>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<script>
+// ── DATA ──
+const COLD_INGREDIENTS = [
+  '계란','김치','두부','대파','마늘','양파','당근','감자','고추',
+  '시금치','콩나물','버섯','애호박','무','오이','토마토','깻잎',
+  '된장','고추장','간장','돼지고기','닭고기','소고기','베이컨',
+  '햄','어묵','치즈','우유','두유','요거트','밥(냉장)','파프리카'
+];
+const FREEZE_INGREDIENTS = [
+  '냉동밥','냉동만두','냉동새우','냉동오징어','냉동고기',
+  '냉동닭','냉동야채믹스','냉동피자','냉동떡','참치캔','스팸',
+  '고등어','삼겹살(냉동)','다진마늘(냉동)','냉동옥수수'
+];
+
+let state = {
+  persons: 2,
+  mealType: '아침',
+  coldSelected: [],
+  freezeSelected: [],
+  coldCustom: [],
+  freezeCustom: [],
+  history: [],
+  apiKey: ''
+};
+
+// ── INIT ──
+window.onload = () => {
+  loadState();
+  renderIngredients();
+  setTimeout(() => {
+    document.getElementById('splash').style.opacity = '0';
+    setTimeout(() => {
+      document.getElementById('splash').style.display = 'none';
+      document.getElementById('app').style.display = 'flex';
+    }, 600);
+  }, 1500);
+};
+
+function loadState() {
+  try {
+    const saved = localStorage.getItem('mhm_state');
+    if (saved) {
+      const s = JSON.parse(saved);
+      state = { ...state, ...s };
+    }
+    const key = localStorage.getItem('mhm_apikey');
+    if (key) state.apiKey = key;
+    const apiInput = document.getElementById('api-key-input');
+    if (apiInput && state.apiKey) apiInput.value = state.apiKey;
+  } catch(e) {}
+}
+
+function resetZone(zone) {
+  if (zone === 'cold') {
+    state.coldSelected = [];
+    state.coldCustom = [];
+    showToast('🧊 냉장실 초기화됐어!');
+  } else {
+    state.freezeSelected = [];
+    state.freezeCustom = [];
+    showToast('❄️ 냉동실 초기화됐어!');
+  }
+  renderIngredients();
+  saveState();
+}
+
+function saveState() {
+  const toSave = { ...state };
+  delete toSave.apiKey;
+  localStorage.setItem('mhm_state', JSON.stringify(toSave));
+}
+
+// ── RENDER ──
+function getCustomItems(zone) {
+  const key = zone === 'cold' ? 'mhm_custom_cold' : 'mhm_custom_freeze';
+  return JSON.parse(localStorage.getItem(key) || '[]');
+}
+
+function renderIngredients() {
+  const savedCold = getCustomItems('cold');
+  const savedFreeze = getCustomItems('freeze');
+  const allColdCustom = [...new Set([...state.coldCustom, ...savedCold])];
+  const allFreezeCustom = [...new Set([...state.freezeCustom, ...savedFreeze])];
+  renderGrid('cold', COLD_INGREDIENTS, allColdCustom, state.coldSelected);
+  renderGrid('freeze', FREEZE_INGREDIENTS, allFreezeCustom, state.freezeSelected);
+  updateCounts();
+}
+
+function renderGrid(zone, base, custom, selected) {
+  const grid = document.getElementById(`${zone}-grid`);
+  const all = [...base, ...custom];
+  grid.innerHTML = all.map(item => `
+    <div class="ingredient-chip ${selected.includes(item) ? 'selected' : ''} ${custom.includes(item) ? 'custom' : ''}"
+      onclick="toggleIngredient('${zone}','${item}')">
+      ${item}
+    </div>
+  `).join('');
+}
+
+function updateCounts() {
+  const cc = state.coldSelected.length;
+  const fc = state.freezeSelected.length;
+  document.getElementById('cold-count').textContent = cc > 0 ? `${cc}개 선택` : '';
+  document.getElementById('freeze-count').textContent = fc > 0 ? `${fc}개 선택` : '';
+}
+
+// ── INTERACTIONS ──
+function toggleIngredient(zone, item) {
+  const key = zone === 'cold' ? 'coldSelected' : 'freezeSelected';
+  const idx = state[key].indexOf(item);
+  if (idx > -1) state[key].splice(idx, 1);
+  else state[key].push(item);
+  renderIngredients();
+  saveState();
+}
+
+function addCustom(zone) {
+  const input = document.getElementById(`${zone}-input`);
+  const val = input.value.trim();
+  if (!val) return;
+  const customKey = zone === 'cold' ? 'coldCustom' : 'freezeCustom';
+  const selectedKey = zone === 'cold' ? 'coldSelected' : 'freezeSelected';
+  if (!state[customKey].includes(val) && !COLD_INGREDIENTS.includes(val) && !FREEZE_INGREDIENTS.includes(val)) {
+    state[customKey].push(val);
+  }
+  if (!state[selectedKey].includes(val)) state[selectedKey].push(val);
+  input.value = '';
+  renderIngredients();
+  saveState();
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    if (document.activeElement.id === 'cold-input') addCustom('cold');
+    if (document.activeElement.id === 'freeze-input') addCustom('freeze');
+  }
+});
+
+function changePerson(delta) {
+  state.persons = Math.max(1, Math.min(10, state.persons + delta));
+  document.getElementById('person-count').textContent = state.persons;
+  saveState();
+}
+
+// meal tabs
+document.querySelectorAll('.meal-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.meal-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    state.mealType = tab.dataset.meal;
+    saveState();
+  });
+});
+
+// ── VIEW MANAGEMENT ──
+function showView(id) {
+  ['main-view','result-view','history-view','settings-view'].forEach(v => {
+    document.getElementById(v).style.display = 'none';
+  });
+  document.getElementById(id).style.display = 'flex';
+}
+
+function goBack() { showView('main-view'); }
+
+function showHistory() {
+  renderHistory();
+  showView('history-view');
+}
+
+function addCustomIngredient(zone) {
+  const inputId = zone === 'cold' ? 'new-cold-input' : 'new-freeze-input';
+  const input = document.getElementById(inputId);
+  const val = input.value.trim();
+  if (!val) return;
+
+  const key = zone === 'cold' ? 'mhm_custom_cold' : 'mhm_custom_freeze';
+  const existing = JSON.parse(localStorage.getItem(key) || '[]');
+  if (existing.includes(val)) { showToast('이미 있는 재료야!'); return; }
+
+  existing.push(val);
+  localStorage.setItem(key, JSON.stringify(existing));
+  input.value = '';
+  renderCustomIngredientList();
+  renderIngredients();
+  showToast(`✅ "${val}" 추가됐어!`);
+}
+
+function removeCustomIngredient(zone, name) {
+  const key = zone === 'cold' ? 'mhm_custom_cold' : 'mhm_custom_freeze';
+  const existing = JSON.parse(localStorage.getItem(key) || '[]');
+  const updated = existing.filter(i => i !== name);
+  localStorage.setItem(key, JSON.stringify(updated));
+  renderCustomIngredientList();
+  renderIngredients();
+  showToast(`🗑️ "${name}" 삭제됐어`);
+}
+
+function renderCustomIngredientList() {
+  ['cold','freeze'].forEach(zone => {
+    const key = zone === 'cold' ? 'mhm_custom_cold' : 'mhm_custom_freeze';
+    const listId = zone === 'cold' ? 'custom-cold-list' : 'custom-freeze-list';
+    const el = document.getElementById(listId);
+    if (!el) return;
+    const items = JSON.parse(localStorage.getItem(key) || '[]');
+    el.innerHTML = items.map(name => `
+      <span style="display:inline-flex; align-items:center; gap:4px; padding:4px 10px;
+        background:var(--orange-pale); border:1.5px solid var(--orange); border-radius:20px;
+        font-size:0.82rem; color:var(--brown);">
+        ${name}
+        <button onclick="removeCustomIngredient('${zone}','${name}')"
+          style="background:none; border:none; cursor:pointer; color:var(--orange); font-weight:700; padding:0; font-size:0.9rem;">✕</button>
+      </span>
+    `).join('');
+  });
+}
+
+function showSettings() {
+  showView('settings-view');
+  renderCustomIngredientList();
+}
+
+function resetAll() {
+  if (!confirm('선택한 재료를 모두 초기화할까?')) return;
+  state.coldSelected = [];
+  state.freezeSelected = [];
+  state.coldCustom = [];
+  state.freezeCustom = [];
+  renderIngredients();
+  saveState();
+  showToast('🔄 재료 초기화됐어!');
+  goBack();
+}
+
+function saveApiKey() {
+  const val = document.getElementById('api-key-input').value.trim();
+  if (!val.startsWith('sk-')) { showToast('올바른 API Key를 입력해줘'); return; }
+  state.apiKey = val;
+  localStorage.setItem('mhm_apikey', val);
+  showToast('✅ API Key 저장됐어!');
+  goBack();
+}
+
+// ── HISTORY ──
+function renderHistory() {
+  const list = document.getElementById('history-list');
+  if (state.history.length === 0) {
+    list.innerHTML = '<p style="color:var(--gray);text-align:center;padding:20px;">아직 기록이 없어</p>';
+    return;
+  }
+  list.innerHTML = state.history.slice().reverse().map((h, i) => `
+    <div class="history-item">
+      <div class="history-emoji">${h.emoji || '🍽️'}</div>
+      <div class="history-info">
+        <div class="history-name">${h.name}</div>
+        <div class="history-date">${h.date} · ${h.meal}</div>
+      </div>
+      <div class="history-del" onclick="deleteHistory(${state.history.length - 1 - i})">✕</div>
+    </div>
+  `).join('');
+}
+
+function deleteHistory(idx) {
+  state.history.splice(idx, 1);
+  saveState();
+  renderHistory();
+}
+
+function addToHistory(menu) {
+  state.history.push({
+    name: menu.name,
+    emoji: menu.emoji,
+    meal: state.mealType,
+    date: new Date().toLocaleDateString('ko-KR', { month: 'short', day: 'numeric' })
+  });
+  if (state.history.length > 50) state.history.shift();
+  saveState();
+}
+
+// ── RECIPE DATABASE ──
+const RECIPES = [
+
+  // ─── 🍚 밥/덮밥류 ───
+  { name:'김치볶음밥', emoji:'🍳', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','야식'],
+    ingredients:['김치','계란','대파'],
+    steps:['팬에 기름 두르고 김치 볶기','밥 넣고 함께 볶기','계란 프라이 올리고 대파 뿌리기'] },
+
+  { name:'참치마요 덮밥', emoji:'🐟', type:'단품', time:'5분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','야식'],
+    ingredients:['참치캔','마요네즈','간장'],
+    steps:['참치 기름 빼기','마요네즈+간장 버무리기','밥 위에 올리기'] },
+
+  { name:'스팸 계란 덮밥', emoji:'🍱', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['스팸','계란','간장'],
+    steps:['스팸 슬라이스해서 굽기','계란 프라이 만들기','밥 위에 올리고 간장 뿌리기'] },
+
+  { name:'소고기 간장 덮밥', emoji:'🥩', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['소고기','간장','양파','마늘'],
+    steps:['소고기 간장+설탕 양념하기','양파 함께 볶기','밥 위에 올리기'] },
+
+  { name:'닭고기 덮밥', emoji:'🍗', type:'단품', time:'20분', difficulty:'보통',
+    mealTypes:['점심','저녁'],
+    ingredients:['닭고기','간장','마늘','양파'],
+    steps:['닭고기 한입 크기로 썰기','간장+마늘+설탕 양념해서 볶기','양파 넣고 함께 볶기','밥 위에 올리기'] },
+
+  { name:'냉동야채 볶음밥', emoji:'🍳', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','야식'],
+    ingredients:['냉동야채믹스','계란','간장'],
+    steps:['냉동야채 팬에 볶기','계란 넣고 스크램블','밥 넣고 간장으로 볶기'] },
+
+  { name:'햄 야채 볶음밥', emoji:'🍳', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','야식'],
+    ingredients:['햄','계란','당근','양파'],
+    steps:['햄, 당근, 양파 잘게 썰기','팬에 볶다 계란 넣기','밥 넣고 소금, 간장으로 간하기'] },
+
+  { name:'두부 된장 덮밥', emoji:'🟨', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['두부','된장','양파','대파'],
+    steps:['두부 깍둑썰어 굽기','된장+물+양파 소스 만들기','밥 위에 두부 올리고 소스 뿌리기'] },
+
+  { name:'계란 간장 덮밥', emoji:'🥚', type:'단품', time:'7분', difficulty:'쉬움',
+    mealTypes:['아침','점심','야식'],
+    ingredients:['계란','간장','대파'],
+    steps:['계란 2개 프라이 반숙으로 만들기','간장+설탕 소스 끓이기','밥 위에 계란 올리고 소스+대파 뿌리기'] },
+
+  { name:'어묵 볶음밥', emoji:'🍢', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','야식'],
+    ingredients:['어묵','김치','계란'],
+    steps:['어묵 잘게 썰어 볶기','김치 넣고 함께 볶기','밥+계란 넣고 볶기'] },
+
+  // ─── 🥘 찌개/국류 ───
+  { name:'김치찌개', emoji:'🥘', type:'세트', time:'20분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['김치','돼지고기','두부','대파'],
+    steps:['돼지고기 볶다 김치 넣기','물 붓고 끓이기','두부+대파 넣고 5분 더 끓이기'] },
+
+  { name:'된장찌개', emoji:'🥘', type:'세트', time:'20분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['된장','두부','감자','애호박','대파'],
+    steps:['감자+애호박 썰기','물에 된장 풀고 끓이기','두부+채소 넣고 10분 끓이기'] },
+
+  { name:'순두부찌개', emoji:'🥘', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['두부','계란','고추장','대파'],
+    steps:['육수 끓이기','고추장 풀고 두부 넣기','계란+대파 넣고 마무리'] },
+
+  { name:'참치찌개', emoji:'🥘', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['참치캔','김치','두부','대파'],
+    steps:['김치 볶기','참치+두부+물 넣기','끓으면 대파 넣기'] },
+
+  { name:'콩나물국', emoji:'🍲', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['콩나물','대파','마늘','간장'],
+    steps:['물 끓이기','콩나물 넣고 5분 끓이기','마늘+간장+대파 넣기'] },
+
+  { name:'미역국', emoji:'🍲', type:'세트', time:'25분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['소고기','간장','마늘'],
+    steps:['미역 불리기','소고기+참기름 볶다 미역 넣기','물 붓고 20분 끓이기'] },
+
+  { name:'계란국', emoji:'🍲', type:'세트', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['계란','대파','간장'],
+    steps:['육수 끓이기','계란 풀어서 넣기','대파+간장으로 간하기'] },
+
+  { name:'애호박 된장국', emoji:'🍲', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['애호박','된장','대파','마늘'],
+    steps:['애호박 반달썰기','물에 된장 풀기','애호박+마늘+대파 넣고 끓이기'] },
+
+  { name:'감자국', emoji:'🍲', type:'세트', time:'20분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['감자','대파','된장'],
+    steps:['감자 깍둑썰기','물 끓이며 된장 풀기','감자+대파 넣고 15분 끓이기'] },
+
+  { name:'어묵탕', emoji:'🍢', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['저녁','술안주','야식'],
+    ingredients:['어묵','대파','간장'],
+    steps:['꼬치 어묵 손질','물+다시마 육수 끓이기','어묵+간장+대파 넣고 끓이기'] },
+
+  { name:'두부찌개', emoji:'🥘', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['두부','고추장','양파','대파'],
+    steps:['두부 깍둑썰기','고추장 육수 끓이기','두부+양파+대파 넣고 끓이기'] },
+
+  { name:'냉동만두국', emoji:'🥟', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁','야식'],
+    ingredients:['냉동만두','계란','대파'],
+    steps:['물 끓이기','만두 넣고 5분 끓이기','계란+대파 넣기'] },
+
+  // ─── 🍜 면류 ───
+  { name:'계란 라면', emoji:'🍜', type:'단품', time:'5분', difficulty:'쉬움',
+    mealTypes:['점심','야식','간식'],
+    ingredients:['계란','대파'],
+    steps:['라면 끓이기','계란 넣고 1분','대파 올리기'] },
+
+  { name:'김치 라면', emoji:'🍜', type:'단품', time:'7분', difficulty:'쉬움',
+    mealTypes:['점심','야식'],
+    ingredients:['김치','대파'],
+    steps:['김치 살짝 볶기','물 붓고 라면 끓이기','대파 올리기'] },
+
+  { name:'스팸 라면', emoji:'🍜', type:'단품', time:'7분', difficulty:'쉬움',
+    mealTypes:['점심','야식'],
+    ingredients:['스팸','계란'],
+    steps:['라면 끓이기','스팸 썰어 넣기','계란 넣기'] },
+
+  { name:'카르보나라', emoji:'🍝', type:'단품', time:'20분', difficulty:'보통',
+    mealTypes:['점심','저녁'],
+    ingredients:['베이컨','계란','치즈','마늘'],
+    steps:['파스타 삶기','베이컨+마늘 볶기','계란+치즈 소스 만들어 버무리기'] },
+
+  { name:'토마토 파스타', emoji:'🍝', type:'단품', time:'20분', difficulty:'보통',
+    mealTypes:['점심','저녁'],
+    ingredients:['토마토','마늘','양파','베이컨'],
+    steps:['파스타 삶기','베이컨+마늘+양파 볶기','토마토 넣고 소스 만들기','버무리기'] },
+
+  { name:'냉동만두 볶음', emoji:'🥟', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','야식','간식','술안주'],
+    ingredients:['냉동만두'],
+    steps:['팬에 기름 두르기','만두 넣고 뚜껑 덮어 굽기','노릇하면 완성'] },
+
+  { name:'우동', emoji:'🍜', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','야식'],
+    ingredients:['어묵','대파','간장'],
+    steps:['육수 끓이기','어묵+간장 넣기','대파 올리기'] },
+
+  // ─── 🥗 반찬류 ───
+  { name:'계란찜', emoji:'🥚', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['계란','대파'],
+    steps:['계란 3개 풀기','소금+물 넣고 섞기','뚝배기에 넣고 약불로 10분 찌기'] },
+
+  { name:'두부조림', emoji:'🟨', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['두부','간장','고추','대파','마늘'],
+    steps:['두부 썰어 굽기','간장+설탕+마늘 소스 만들기','소스에 조리기'] },
+
+  { name:'감자조림', emoji:'🥔', type:'반찬', time:'20분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['감자','간장','마늘'],
+    steps:['감자 깍둑썰기','간장+설탕+물 넣기','약불에 졸이기'] },
+
+  { name:'콩나물무침', emoji:'🌿', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['콩나물','마늘','간장'],
+    steps:['콩나물 데치기','마늘+간장+참기름으로 무치기'] },
+
+  { name:'시금치나물', emoji:'🥬', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['시금치','마늘','간장'],
+    steps:['시금치 데치기','마늘+간장+참기름으로 무치기'] },
+
+  { name:'어묵볶음', emoji:'🍢', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['어묵','대파','간장','고추'],
+    steps:['어묵 썰기','팬에 볶기','간장+설탕+대파 넣기'] },
+
+  { name:'베이컨 볶음', emoji:'🥓', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['베이컨','양파','파프리카'],
+    steps:['재료 썰기','팬에 볶기','소금+후추로 간하기'] },
+
+  { name:'당근 라페', emoji:'🥕', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['당근','마늘'],
+    steps:['당근 채썰기','식초+설탕+소금 드레싱 만들기','버무려 냉장 30분 재우기'] },
+
+  { name:'애호박 볶음', emoji:'🥒', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['애호박','마늘','간장'],
+    steps:['애호박 반달썰기','마늘 볶다 애호박 넣기','간장+소금으로 간하기'] },
+
+  { name:'감자 계란 볶음', emoji:'🥔', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['감자','계란','양파'],
+    steps:['감자+양파 볶기','계란 넣고 스크램블하듯 볶기','소금으로 간하기'] },
+
+  { name:'스팸 구이', emoji:'🥩', type:'반찬', time:'7분', difficulty:'쉬움',
+    mealTypes:['아침','점심','술안주','야식'],
+    ingredients:['스팸'],
+    steps:['스팸 슬라이스','팬에 앞뒤로 굽기','노릇하면 완성'] },
+
+  { name:'햄 구이', emoji:'🍖', type:'반찬', time:'5분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['햄'],
+    steps:['햄 슬라이스','팬에 굽기'] },
+
+  { name:'버섯볶음', emoji:'🍄', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['버섯','마늘','간장','대파'],
+    steps:['버섯 손질','마늘 볶다 버섯 넣기','간장+대파로 마무리'] },
+
+  { name:'무생채', emoji:'🌿', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['무','고추','간장'],
+    steps:['무 채썰기','소금에 절이기','고추+간장+식초로 무치기'] },
+
+  { name:'오이무침', emoji:'🥒', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['오이','마늘','고추장'],
+    steps:['오이 어슷썰기','소금에 살짝 절이기','마늘+고추장+식초로 무치기'] },
+
+  { name:'파프리카 볶음', emoji:'🫑', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['파프리카','양파','간장'],
+    steps:['파프리카+양파 썰기','팬에 볶기','간장+소금으로 간하기'] },
+
+  { name:'깻잎 무침', emoji:'🌿', type:'반찬', time:'7분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['깻잎','간장','마늘'],
+    steps:['깻잎 씻기','간장+마늘+참기름 양념 만들기','버무리기'] },
+
+  // ─── 🍳 아침 특화 ───
+  { name:'스크램블 에그', emoji:'🥚', type:'단품', time:'5분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['계란','우유'],
+    steps:['계란+우유 섞기','약불에 천천히 저어가며 익히기','소금으로 간하기'] },
+
+  { name:'계란 프라이', emoji:'🍳', type:'단품', time:'3분', difficulty:'쉬움',
+    mealTypes:['아침','간식','야식'],
+    ingredients:['계란'],
+    steps:['팬 달구기','계란 넣기','취향대로 익히기'] },
+
+  { name:'햄 계란 토스트', emoji:'🥪', type:'단품', time:'7분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['계란','햄'],
+    steps:['계란 스크램블 만들기','햄 굽기','빵에 올리기'] },
+
+  { name:'치즈 계란 토스트', emoji:'🧀', type:'단품', time:'7분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['계란','치즈'],
+    steps:['계란 프라이 만들기','치즈 올려 녹이기','빵에 올리기'] },
+
+  { name:'요거트 볼', emoji:'🫙', type:'단품', time:'2분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['요거트'],
+    steps:['요거트 그릇에 담기','과일이나 견과류 올리기'] },
+
+  { name:'두유 한 잔', emoji:'🥛', type:'단품', time:'1분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['두유'],
+    steps:['컵에 따르기','차갑게 마시기'] },
+
+  // ─── 🥟 냉동 활용 ───
+  { name:'냉동새우 버터볶음', emoji:'🦐', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','술안주'],
+    ingredients:['냉동새우','마늘'],
+    steps:['새우 해동','버터+마늘 볶기','새우 넣고 볶기','소금+후추 간하기'] },
+
+  { name:'냉동오징어 볶음', emoji:'🦑', type:'반찬', time:'15분', difficulty:'보통',
+    mealTypes:['점심','저녁','술안주'],
+    ingredients:['냉동오징어','고추장','양파','대파'],
+    steps:['오징어 해동+손질','고추장 양념 만들기','양파+오징어 볶기','대파 넣기'] },
+
+  { name:'냉동닭 간장찜', emoji:'🍗', type:'세트', time:'30분', difficulty:'보통',
+    mealTypes:['점심','저녁'],
+    ingredients:['냉동닭','간장','감자','양파','마늘'],
+    steps:['닭 해동+손질','간장+마늘 양념 만들기','감자+양파와 함께 조리기'] },
+
+  { name:'냉동닭 고추장볶음', emoji:'🍗', type:'세트', time:'25분', difficulty:'보통',
+    mealTypes:['점심','저녁'],
+    ingredients:['냉동닭','고추장','마늘','대파'],
+    steps:['닭 해동+손질','고추장 양념 만들기','팬에 볶기','대파 넣기'] },
+
+  { name:'냉동떡볶이', emoji:'🍡', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','간식','야식'],
+    ingredients:['냉동떡','고추장','대파'],
+    steps:['떡 해동','고추장+설탕+물 소스 끓이기','떡 넣고 조리기','대파 올리기'] },
+
+  { name:'냉동고기 된장볶음', emoji:'🥩', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['냉동고기','된장','양파','마늘'],
+    steps:['고기 해동','된장+마늘 양념','양파+고기 볶기'] },
+
+  // ─── 🍺 술안주 ───
+  { name:'두부김치', emoji:'🍺', type:'안주', time:'15분', difficulty:'쉬움',
+    mealTypes:['술안주'],
+    ingredients:['두부','김치','돼지고기'],
+    steps:['두부 굽기','김치+돼지고기 볶기','두부 옆에 볶은 김치 올리기'] },
+
+  { name:'계란말이', emoji:'🟡', type:'안주', time:'10분', difficulty:'보통',
+    mealTypes:['술안주','아침','점심'],
+    ingredients:['계란','당근','대파'],
+    steps:['계란 풀고 당근+대파 넣기','팬에 얇게 펴 익히기','돌돌 말기','썰기'] },
+
+  { name:'감자전', emoji:'🥔', type:'안주', time:'20분', difficulty:'보통',
+    mealTypes:['술안주','간식'],
+    ingredients:['감자','양파'],
+    steps:['감자+양파 갈기','소금으로 간하기','팬에 부치기'] },
+
+  { name:'김치전', emoji:'🥞', type:'안주', time:'15분', difficulty:'쉬움',
+    mealTypes:['술안주','간식'],
+    ingredients:['김치','양파'],
+    steps:['김치+양파 썰기','밀가루+물 반죽','팬에 부치기'] },
+
+  { name:'파전', emoji:'🥞', type:'안주', time:'15분', difficulty:'쉬움',
+    mealTypes:['술안주','간식'],
+    ingredients:['대파','계란'],
+    steps:['대파 어슷썰기','밀가루+계란+물 반죽','팬에 부치기'] },
+
+  { name:'두부 구이', emoji:'🟨', type:'안주', time:'10분', difficulty:'쉬움',
+    mealTypes:['술안주','점심','저녁'],
+    ingredients:['두부','간장','마늘'],
+    steps:['두부 썰어 소금 뿌리기','팬에 굽기','간장+마늘 소스 뿌리기'] },
+
+  { name:'오이 소박이', emoji:'🥒', type:'안주', time:'10분', difficulty:'쉬움',
+    mealTypes:['술안주','점심','저녁'],
+    ingredients:['오이','고추','마늘'],
+    steps:['오이 칼집 내기','고추+마늘 양념 만들기','오이에 양념 채우기'] },
+
+  { name:'냉동만두 군만두', emoji:'🥟', type:'안주', time:'10분', difficulty:'쉬움',
+    mealTypes:['술안주','야식','간식'],
+    ingredients:['냉동만두'],
+    steps:['팬에 기름 두르기','만두 넣고 물 조금 붓기','뚜껑 덮고 굽기','바삭하게 마무리'] },
+
+  // ─── 🍪 간식 ───
+  { name:'계란 토스트', emoji:'🍳', type:'간식', time:'7분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['계란','햄'],
+    steps:['계란 프라이 만들기','햄 굽기','빵에 올리기'] },
+
+  { name:'치즈 토스트', emoji:'🧀', type:'간식', time:'5분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['치즈'],
+    steps:['빵에 치즈 올리기','팬에 굽거나 전자렌지 1분','노릇하면 완성'] },
+
+  { name:'바나나 우유', emoji:'🥛', type:'간식', time:'2분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['우유'],
+    steps:['우유 붓기','취향에 따라 바나나 갈아 넣기'] },
+
+  { name:'냉동만두 에어프라이', emoji:'🥟', type:'간식', time:'12분', difficulty:'쉬움',
+    mealTypes:['간식','야식'],
+    ingredients:['냉동만두'],
+    steps:['에어프라이어 180도 예열','만두 넣기','12분 구우면 완성'] },
+
+  { name:'스팸 주먹밥', emoji:'🍙', type:'간식', time:'10분', difficulty:'쉬움',
+    mealTypes:['간식','야식'],
+    ingredients:['스팸','간장'],
+    steps:['스팸 잘게 썰어 굽기','밥에 스팸+간장 섞기','손으로 뭉치기'] },
+
+  { name:'참치 주먹밥', emoji:'🍙', type:'간식', time:'7분', difficulty:'쉬움',
+    mealTypes:['간식','야식'],
+    ingredients:['참치캔','마요네즈'],
+    steps:['참치 기름 빼기','마요네즈 버무리기','밥에 섞어 뭉치기'] },
+
+  // ─── 🌃 야식 특화 ───
+  { name:'라볶이', emoji:'🍜', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['야식','간식'],
+    ingredients:['냉동떡','고추장','어묵'],
+    steps:['고추장 소스 끓이기','떡+어묵 넣기','라면 사리 넣고 끓이기'] },
+
+  { name:'소고기 미역국', emoji:'🍲', type:'세트', time:'25분', difficulty:'쉬움',
+    mealTypes:['아침','저녁'],
+    ingredients:['소고기','간장','마늘'],
+    steps:['소고기 볶기','미역 넣고 볶기','물 붓고 20분 끓이기'] },
+
+  { name:'감자 스프', emoji:'🥔', type:'단품', time:'20분', difficulty:'보통',
+    mealTypes:['아침','점심'],
+    ingredients:['감자','양파','우유'],
+    steps:['감자+양파 볶기','우유 붓고 끓이기','믹서에 갈기','소금으로 간하기'] },
+
+  { name:'냉동새우 볶음밥', emoji:'🦐', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','야식'],
+    ingredients:['냉동새우','계란','대파'],
+    steps:['새우 해동','팬에 볶기','계란+밥+대파 넣고 볶기'] },
+
+  { name:'소고기 볶음', emoji:'🥩', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['소고기','간장','마늘','양파'],
+    steps:['소고기 간장+마늘 양념','팬에 볶기','양파 넣고 함께 볶기'] },
+
+  { name:'토마토 계란볶음', emoji:'🍅', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['토마토','계란','마늘'],
+    steps:['토마토 썰기','계란 풀기','마늘 볶다 토마토+계란 넣고 볶기'] },
+
+  { name:'버섯 계란 볶음', emoji:'🍄', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['버섯','계란','마늘'],
+    steps:['버섯 손질','마늘+버섯 볶기','계란 넣고 스크램블'] },
+
+  { name:'돼지고기 된장볶음', emoji:'🥩', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['돼지고기','된장','양파','마늘'],
+    steps:['돼지고기+된장+마늘 양념','팬에 볶기','양파 넣기'] },
+
+  { name:'닭고기 간장조림', emoji:'🍗', type:'반찬', time:'25분', difficulty:'보통',
+    mealTypes:['점심','저녁'],
+    ingredients:['닭고기','간장','마늘','감자'],
+    steps:['닭고기 손질','간장+마늘 양념','감자 넣고 조리기'] },
+
+  { name:'두부 스크램블', emoji:'🟨', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['두부','계란','대파'],
+    steps:['두부 으깨기','계란 풀기','팬에 함께 볶다 대파 넣기'] },
+
+  { name:'양파 볶음', emoji:'🧅', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['양파','간장'],
+    steps:['양파 채썰기','팬에 볶기','간장+설탕으로 간하기'] },
+
+  { name:'고추 된장무침', emoji:'🌶', type:'반찬', time:'5분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['고추','된장'],
+    steps:['고추 썰기','된장+참기름으로 무치기'] },
+
+  { name:'돼지고기 김치볶음', emoji:'🥩', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['돼지고기','김치','대파'],
+    steps:['돼지고기 썰기','팬에 돼지고기 볶기','김치+대파 넣고 볶기'] },
+
+  { name:'냉동옥수수 버터볶음', emoji:'🌽', type:'반찬', time:'7분', difficulty:'쉬움',
+    mealTypes:['아침','점심','간식'],
+    ingredients:['냉동옥수수'],
+    steps:['팬에 버터 녹이기','옥수수 넣고 볶기','소금으로 간하기'] },
+
+  { name:'참치 김치볶음', emoji:'🐟', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['참치캔','김치','양파'],
+    steps:['양파 볶기','김치+참치 넣고 함께 볶기'] },
+
+  { name:'스팸 김치볶음', emoji:'🥩', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','야식'],
+    ingredients:['스팸','김치'],
+    steps:['스팸 깍둑썰기','팬에 볶기','김치 넣고 함께 볶기'] },
+
+  { name:'달걀 장조림', emoji:'🥚', type:'반찬', time:'20분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['계란','간장','마늘'],
+    steps:['계란 삶기','간장+설탕+마늘 소스 끓이기','계란 넣고 조리기'] },
+
+  { name:'감자 볶음', emoji:'🥔', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['감자','양파','간장'],
+    steps:['감자 채썰기','물에 담가 전분 빼기','팬에 양파+감자 볶기','간장으로 간하기'] },
+
+  { name:'무 볶음', emoji:'🌿', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['무','간장','마늘','대파'],
+    steps:['무 채썰기','팬에 볶기','간장+마늘+대파로 간하기'] },
+
+  { name:'냉동새우 계란볶음', emoji:'🦐', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['냉동새우','계란','대파'],
+    steps:['새우 해동','계란 풀기','팬에 새우+계란 볶다 대파 올리기'] },
+
+  { name:'닭고기 야채볶음', emoji:'🍗', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['닭고기','양파','당근','마늘'],
+    steps:['닭+야채 썰기','마늘 볶다 닭 넣기','당근+양파 넣고 볶기','소금으로 간하기'] },
+
+  { name:'두부 야채볶음', emoji:'🟨', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['두부','당근','양파','간장'],
+    steps:['두부+야채 썰기','팬에 볶기','간장으로 간하기'] },
+
+  { name:'소고기 야채볶음', emoji:'🥩', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['소고기','당근','양파','간장'],
+    steps:['재료 썰기','소고기 볶기','야채 넣고 간장으로 볶기'] },
+
+  { name:'오징어 볶음', emoji:'🦑', type:'반찬', time:'15분', difficulty:'보통',
+    mealTypes:['점심','저녁','술안주'],
+    ingredients:['냉동오징어','고추장','양파','대파'],
+    steps:['오징어 해동+손질','고추장 양념 만들기','양파+오징어 볶기','대파 올리기'] },
+
+  { name:'베이컨 야채볶음', emoji:'🥓', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['베이컨','양파','파프리카','마늘'],
+    steps:['재료 썰기','마늘+베이컨 볶기','야채 넣고 볶기','소금+후추 간하기'] },
+
+
+  // ─── 추가 3개 ───
+  { name:'계란 볶음밥', emoji:'🍳', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁','야식'],
+    ingredients:['계란','대파','간장'],
+    steps:['계란 스크램블 만들기','밥 넣고 볶기','간장+대파로 간하기'] },
+
+  { name:'치즈 계란찜', emoji:'🧀', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['계란','치즈','대파'],
+    steps:['계란 풀고 소금+물 넣기','뚝배기에 넣고 약불로 찌기','치즈+대파 올려 녹이기'] },
+
+  { name:'냉동고기 김치찌개', emoji:'🥘', type:'세트', time:'20분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['냉동고기','김치','두부','대파'],
+    steps:['고기 해동+볶기','김치 넣고 함께 볶기','물+두부 넣고 끓이기','대파 올리기'] },
+
+// ─── 추가 100개 ───
+
+  // 🍚 밥/덮밥 추가
+  { name:'오야코동', emoji:'🍱', type:'단품', time:'15분', difficulty:'보통',
+    mealTypes:['점심','저녁'],
+    ingredients:['닭고기','계란','양파','간장'],
+    steps:['닭고기+양파 간장으로 볶기','계란 풀어 반숙으로 올리기','밥 위에 올리기'] },
+
+  { name:'규동', emoji:'🥩', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['소고기','양파','간장'],
+    steps:['소고기+양파 간장+설탕+미림으로 조리기','밥 위에 올리기','생강 있으면 올리기'] },
+
+  { name:'마파두부 덮밥', emoji:'🌶', type:'단품', time:'15분', difficulty:'보통',
+    mealTypes:['점심','저녁'],
+    ingredients:['두부','돼지고기','고추장','마늘','대파'],
+    steps:['돼지고기+마늘 볶기','두부 넣고 고추장 소스 만들기','대파 넣고 밥 위에 올리기'] },
+
+  { name:'나물 비빔밥', emoji:'🥗', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['시금치','콩나물','당근','계란','고추장'],
+    steps:['나물 각각 무치기','계란 프라이 만들기','밥에 나물+고추장 올려 비비기'] },
+
+  { name:'김치 참치 덮밥', emoji:'🐟', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','야식'],
+    ingredients:['참치캔','김치','마요네즈'],
+    steps:['김치 볶기','참치+마요네즈 버무리기','밥 위에 올리기'] },
+
+  { name:'버섯 덮밥', emoji:'🍄', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['버섯','간장','마늘','양파'],
+    steps:['버섯+양파 볶기','간장+마늘 소스 만들기','밥 위에 올리기'] },
+
+  { name:'돼지고기 덮밥', emoji:'🥩', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['돼지고기','양파','간장','마늘'],
+    steps:['돼지고기+마늘 볶기','양파+간장 넣고 볶기','밥 위에 올리기'] },
+
+  { name:'김 계란 덮밥', emoji:'🥚', type:'단품', time:'7분', difficulty:'쉬움',
+    mealTypes:['아침','점심','야식'],
+    ingredients:['계란','간장'],
+    steps:['계란 풀어 스크램블 만들기','간장+참기름 뿌리기','밥 위에 올리고 김 뿌리기'] },
+
+  { name:'새우 볶음밥', emoji:'🦐', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['냉동새우','계란','대파','간장'],
+    steps:['새우 해동','팬에 새우 볶기','계란+밥+대파 넣고 간장으로 볶기'] },
+
+  { name:'오징어 덮밥', emoji:'🦑', type:'단품', time:'15분', difficulty:'보통',
+    mealTypes:['점심','저녁'],
+    ingredients:['냉동오징어','고추장','양파','대파'],
+    steps:['오징어 해동+손질','고추장 양념 만들기','양파와 볶아 밥 위에 올리기'] },
+
+  // 🥘 찌개/국 추가
+  { name:'부대찌개', emoji:'🥘', type:'세트', time:'20분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['스팸','햄','김치','두부','대파'],
+    steps:['스팸+햄 썰기','김치+두부 넣고 육수 끓이기','대파 올리기'] },
+
+  { name:'황태국', emoji:'🍲', type:'세트', time:'20분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['계란','대파','마늘'],
+    steps:['황태 불리기','마늘 볶다 황태 넣기','물 붓고 끓이다 계란+대파 넣기'] },
+
+  { name:'닭개장', emoji:'🍲', type:'세트', time:'30분', difficulty:'보통',
+    mealTypes:['점심','저녁'],
+    ingredients:['냉동닭','고추','대파','마늘'],
+    steps:['닭 삶아 찢기','고추+마늘 양념 만들기','육수에 닭+대파 넣고 끓이기'] },
+
+  { name:'소고기 뭇국', emoji:'🍲', type:'세트', time:'25분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['소고기','무','대파','간장'],
+    steps:['소고기+무 볶기','물 붓고 끓이기','간장+대파 넣기'] },
+
+  { name:'버섯 된장국', emoji:'🍲', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['버섯','된장','두부','대파'],
+    steps:['육수 끓이기','된장 풀기','버섯+두부+대파 넣고 끓이기'] },
+
+  { name:'북어국', emoji:'🍲', type:'세트', time:'20분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['계란','대파','마늘','간장'],
+    steps:['북어채 물에 불리기','마늘 볶다 북어 넣기','물 붓고 끓이다 계란+대파 넣기'] },
+
+  { name:'감자 된장국', emoji:'🍲', type:'세트', time:'20분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['감자','된장','양파','대파'],
+    steps:['감자+양파 썰기','된장 풀고 끓이기','감자+대파 넣고 15분 끓이기'] },
+
+  { name:'두부 김치국', emoji:'🍲', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['두부','김치','대파'],
+    steps:['김치 볶기','물 붓고 두부 넣기','대파 넣고 끓이기'] },
+
+  { name:'시금치 된장국', emoji:'🍲', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['시금치','된장','마늘','대파'],
+    steps:['육수 끓이기','된장 풀기','시금치+마늘+대파 넣고 끓이기'] },
+
+  { name:'냉동새우 된장국', emoji:'🍲', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['냉동새우','된장','두부','대파'],
+    steps:['새우 해동','된장 육수 끓이기','새우+두부+대파 넣고 끓이기'] },
+
+  // 🍜 면류 추가
+  { name:'된장 라면', emoji:'🍜', type:'단품', time:'7분', difficulty:'쉬움',
+    mealTypes:['점심','야식'],
+    ingredients:['된장','두부','대파'],
+    steps:['라면 끓이기','된장 풀기','두부+대파 넣기'] },
+
+  { name:'만두 라면', emoji:'🍜', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','야식'],
+    ingredients:['냉동만두','계란','대파'],
+    steps:['라면 끓이기','만두 넣기','계란+대파 올리기'] },
+
+  { name:'버섯 라면', emoji:'🍜', type:'단품', time:'7분', difficulty:'쉬움',
+    mealTypes:['점심','야식'],
+    ingredients:['버섯','계란','대파'],
+    steps:['라면 끓이기','버섯 넣기','계란+대파 올리기'] },
+
+  { name:'냉면 스타일 국수', emoji:'🍜', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['오이','당근','계란'],
+    steps:['국수 삶아 찬물에 헹구기','오이+당근 채썰기','계란 삶아 올리기','간장+식초 소스 만들기'] },
+
+  { name:'비빔국수', emoji:'🍜', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','야식'],
+    ingredients:['오이','고추장','마늘'],
+    steps:['국수 삶아 찬물에 헹구기','고추장+마늘+참기름 양념 만들기','오이+양념으로 비비기'] },
+
+  { name:'간장 국수', emoji:'🍜', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','야식'],
+    ingredients:['대파','간장','마늘'],
+    steps:['국수 삶기','간장+마늘+참기름 양념 만들기','대파 올리기'] },
+
+  { name:'떡국', emoji:'🍲', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['냉동떡','계란','대파'],
+    steps:['육수 끓이기','떡 넣고 끓이기','계란 지단+대파 올리기'] },
+
+  { name:'오므라이스', emoji:'🍳', type:'단품', time:'15분', difficulty:'보통',
+    mealTypes:['점심','저녁'],
+    ingredients:['계란','양파','당근','간장'],
+    steps:['야채 볶아 케첩 볶음밥 만들기','계란 얇게 펴 부치기','볶음밥 싸기','케첩 뿌리기'] },
+
+  // 🥗 반찬 추가
+  { name:'소고기 장조림', emoji:'🥩', type:'반찬', time:'40분', difficulty:'보통',
+    mealTypes:['점심','저녁'],
+    ingredients:['소고기','간장','마늘','계란'],
+    steps:['소고기 삶기','간장+마늘+설탕 소스 만들기','소고기 넣고 조리기','계란 넣고 함께 조리기'] },
+
+  { name:'멸치볶음', emoji:'🐟', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['간장','마늘'],
+    steps:['멸치 팬에 볶기','간장+설탕+마늘 넣기','참기름 뿌리기'] },
+
+  { name:'김무침', emoji:'🌿', type:'반찬', time:'5분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['간장','마늘'],
+    steps:['김 잘게 부수기','간장+마늘+참기름으로 무치기'] },
+
+  { name:'두부 계란찜', emoji:'🟨', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['두부','계란','대파'],
+    steps:['두부 으깨기','계란 풀어 두부와 섞기','뚝배기에 넣고 찌기','대파 올리기'] },
+
+  { name:'콩나물 볶음', emoji:'🌿', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['콩나물','마늘','간장'],
+    steps:['팬에 기름 두르기','콩나물 볶기','마늘+간장으로 간하기'] },
+
+  { name:'당근 볶음', emoji:'🥕', type:'반찬', time:'7분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['당근','마늘'],
+    steps:['당근 채썰기','마늘 볶다 당근 넣기','소금으로 간하기'] },
+
+  { name:'호박전', emoji:'🥒', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','술안주'],
+    ingredients:['애호박','계란'],
+    steps:['애호박 동그랗게 썰기','소금 뿌려 절이기','계란 입혀 팬에 부치기'] },
+
+  { name:'두부전', emoji:'🟨', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','술안주'],
+    ingredients:['두부','계란'],
+    steps:['두부 썰어 소금 뿌리기','계란 입히기','팬에 노릇하게 부치기'] },
+
+  { name:'어묵 계란 볶음', emoji:'🍢', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['어묵','계란','대파'],
+    steps:['어묵 썰기','팬에 볶다 계란 넣기','대파 올리기'] },
+
+  { name:'감자 스팸 볶음', emoji:'🥔', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['감자','스팸'],
+    steps:['감자+스팸 깍둑썰기','팬에 볶기','소금+후추 간하기'] },
+
+  { name:'양파 계란 볶음', emoji:'🧅', type:'반찬', time:'7분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['양파','계란'],
+    steps:['양파 채썰기','팬에 볶다 계란 넣기','소금으로 간하기'] },
+
+  { name:'김치 계란찜', emoji:'🥚', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['김치','계란','대파'],
+    steps:['계란 풀기','김치 잘게 썰어 넣기','뚝배기에 찌기','대파 올리기'] },
+
+  { name:'참치 마요 계란볶음', emoji:'🐟', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['참치캔','계란','마요네즈'],
+    steps:['참치 기름 빼기','계란 풀어 스크램블 만들기','참치+마요네즈 섞어 올리기'] },
+
+  { name:'베이컨 계란말이', emoji:'🥓', type:'반찬', time:'10분', difficulty:'보통',
+    mealTypes:['아침','점심','술안주'],
+    ingredients:['베이컨','계란','당근'],
+    steps:['계란 풀기','당근 잘게 썰어 넣기','베이컨 올리고 돌돌 말기','썰기'] },
+
+  { name:'스팸 계란볶음', emoji:'🥩', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['스팸','계란','대파'],
+    steps:['스팸 깍둑썰기','팬에 볶기','계란+대파 넣고 볶기'] },
+
+  { name:'감자 베이컨 볶음', emoji:'🥔', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['감자','베이컨','양파'],
+    steps:['감자+베이컨+양파 썰기','팬에 볶기','소금+후추 간하기'] },
+
+  { name:'두부 스팸 조림', emoji:'🟨', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['두부','스팸','간장'],
+    steps:['두부+스팸 썰기','팬에 굽기','간장+설탕 소스로 조리기'] },
+
+  { name:'오이 계란볶음', emoji:'🥒', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['오이','계란','마늘'],
+    steps:['오이 어슷썰기','마늘 볶다 오이 넣기','계란 넣고 볶기','소금 간하기'] },
+
+  { name:'무 계란국', emoji:'🍲', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['무','계란','대파','간장'],
+    steps:['무 나박썰기','물 끓이며 무 넣기','계란 풀어 넣기','간장+대파 올리기'] },
+
+  { name:'버섯 계란국', emoji:'🍲', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['버섯','계란','대파','간장'],
+    steps:['버섯 손질','육수 끓이기','버섯 넣고 끓이기','계란+대파+간장 넣기'] },
+
+  // 🍳 아침 추가
+  { name:'프렌치 토스트', emoji:'🍞', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['계란','우유'],
+    steps:['계란+우유 섞기','빵 담가 흠뻑 적시기','버터 팬에 노릇하게 굽기','시럽 뿌리기'] },
+
+  { name:'계란 샌드위치', emoji:'🥪', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['계란','마요네즈'],
+    steps:['계란 삶기','으깨서 마요네즈+소금 섞기','빵에 올리기'] },
+
+  { name:'햄치즈 샌드위치', emoji:'🥪', type:'단품', time:'5분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['햄','치즈'],
+    steps:['빵에 햄+치즈 올리기','팬에 구워주기'] },
+
+  { name:'베이컨 토스트', emoji:'🥓', type:'단품', time:'7분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['베이컨','계란'],
+    steps:['베이컨 굽기','계란 프라이 만들기','빵에 올리기'] },
+
+  { name:'두유 스무디', emoji:'🥛', type:'단품', time:'3분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['두유','바나나'],
+    steps:['두유+바나나 믹서에 넣기','갈기','컵에 따르기'] },
+
+  { name:'계란 죽', emoji:'🍚', type:'단품', time:'20분', difficulty:'쉬움',
+    mealTypes:['아침'],
+    ingredients:['계란','간장','마늘'],
+    steps:['쌀 씻어 물 넣고 끓이기','계란 풀어 넣기','간장+마늘로 간하기'] },
+
+  { name:'두부 된장국 아침', emoji:'🍲', type:'세트', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침'],
+    ingredients:['두부','된장','대파'],
+    steps:['물 끓이기','된장 풀기','두부+대파 넣고 끓이기'] },
+
+  { name:'요거트 과일 볼', emoji:'🫙', type:'단품', time:'3분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['요거트','토마토'],
+    steps:['요거트 그릇에 담기','토마토 썰어 올리기','꿀 뿌리기'] },
+
+  // 🍺 술안주 추가
+  { name:'계란 장조림 안주', emoji:'🥚', type:'안주', time:'20분', difficulty:'쉬움',
+    mealTypes:['술안주'],
+    ingredients:['계란','간장','마늘'],
+    steps:['계란 삶기','간장+마늘+설탕 소스 끓이기','계란 넣고 조리기'] },
+
+  { name:'두부 조림 안주', emoji:'🟨', type:'안주', time:'15분', difficulty:'쉬움',
+    mealTypes:['술안주'],
+    ingredients:['두부','간장','고추','마늘'],
+    steps:['두부 굽기','간장+고추+마늘 소스 만들기','소스에 조리기'] },
+
+  { name:'감자전 안주', emoji:'🥔', type:'안주', time:'20분', difficulty:'보통',
+    mealTypes:['술안주'],
+    ingredients:['감자','양파','계란'],
+    steps:['감자+양파 갈기','계란 넣고 반죽','팬에 부치기'] },
+
+  { name:'어묵 꼬치 안주', emoji:'🍢', type:'안주', time:'15분', difficulty:'쉬움',
+    mealTypes:['술안주','야식'],
+    ingredients:['어묵','대파','간장'],
+    steps:['어묵 꼬치에 끼우기','육수 끓이기','간장+대파 넣기'] },
+
+  { name:'스팸 무스비', emoji:'🍙', type:'안주', time:'10분', difficulty:'쉬움',
+    mealTypes:['술안주','간식'],
+    ingredients:['스팸','간장'],
+    steps:['스팸 굽기','간장+설탕 소스 바르기','밥에 올려 김으로 감싸기'] },
+
+  { name:'냉동새우 칠리볶음', emoji:'🦐', type:'안주', time:'10분', difficulty:'쉬움',
+    mealTypes:['술안주','저녁'],
+    ingredients:['냉동새우','고추장','마늘'],
+    steps:['새우 해동','마늘 볶기','새우+고추장 넣고 볶기'] },
+
+  { name:'베이컨 말이', emoji:'🥓', type:'안주', time:'10분', difficulty:'쉬움',
+    mealTypes:['술안주'],
+    ingredients:['베이컨','파프리카'],
+    steps:['파프리카 막대 썰기','베이컨으로 감싸기','팬에 굽기'] },
+
+  { name:'치즈 계란 말이', emoji:'🧀', type:'안주', time:'10분', difficulty:'보통',
+    mealTypes:['술안주','아침'],
+    ingredients:['계란','치즈','대파'],
+    steps:['계란 풀고 대파 넣기','팬에 얇게 펴 치즈 올리기','돌돌 말기','썰기'] },
+
+  { name:'두부 김치볶음', emoji:'🥘', type:'안주', time:'15분', difficulty:'쉬움',
+    mealTypes:['술안주','저녁'],
+    ingredients:['두부','김치','돼지고기'],
+    steps:['두부 굽기','돼지고기+김치 볶기','두부 옆에 올리기'] },
+
+  { name:'오이 안주', emoji:'🥒', type:'안주', time:'5분', difficulty:'쉬움',
+    mealTypes:['술안주'],
+    ingredients:['오이','고추장','마늘'],
+    steps:['오이 막대썰기','고추장+마늘+식초 소스 만들기','찍어먹기'] },
+
+  // 🌃 야식 추가
+  { name:'스팸 계란 라이스', emoji:'🍳', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['야식'],
+    ingredients:['스팸','계란','간장'],
+    steps:['스팸 굽기','계란 프라이 만들기','밥+간장+참기름 비비기','올리기'] },
+
+  { name:'냉동만두 에어프라이', emoji:'🥟', type:'단품', time:'12분', difficulty:'쉬움',
+    mealTypes:['야식','간식'],
+    ingredients:['냉동만두'],
+    steps:['에어프라이어 180도 예열','만두 넣기','12분 구우기'] },
+
+  { name:'참치 계란 덮밥', emoji:'🐟', type:'단품', time:'7분', difficulty:'쉬움',
+    mealTypes:['야식','점심'],
+    ingredients:['참치캔','계란','간장'],
+    steps:['계란 프라이 만들기','참치 기름 빼기','밥에 올리고 간장 뿌리기'] },
+
+  { name:'두부 계란 볶음', emoji:'🟨', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['야식','점심'],
+    ingredients:['두부','계란','간장','대파'],
+    steps:['두부 으깨기','계란 풀기','팬에 함께 볶다 간장+대파 넣기'] },
+
+  { name:'어묵 볶음 야식', emoji:'🍢', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['야식','술안주'],
+    ingredients:['어묵','고추장','대파'],
+    steps:['어묵 썰기','고추장+간장으로 볶기','대파 올리기'] },
+
+  // 🥟 냉동 추가
+  { name:'냉동닭 오븐구이', emoji:'🍗', type:'세트', time:'30분', difficulty:'쉬움',
+    mealTypes:['저녁'],
+    ingredients:['냉동닭','마늘','간장'],
+    steps:['닭 해동','간장+마늘+올리브유 양념','오븐 200도 25분 굽기'] },
+
+  { name:'냉동새우 마늘구이', emoji:'🦐', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['저녁','술안주'],
+    ingredients:['냉동새우','마늘'],
+    steps:['새우 해동','마늘+버터 팬에 볶기','새우 넣고 굽기','소금+파슬리'] },
+
+  { name:'냉동오징어 된장볶음', emoji:'🦑', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['냉동오징어','된장','양파','마늘'],
+    steps:['오징어 해동+손질','된장+마늘 양념 만들기','양파+오징어 볶기'] },
+
+  { name:'냉동떡 간장볶음', emoji:'🍡', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['간식','야식'],
+    ingredients:['냉동떡','간장'],
+    steps:['떡 해동','팬에 굽기','간장+설탕+참기름 버무리기'] },
+
+  { name:'냉동고기 된장찌개', emoji:'🥘', type:'세트', time:'20분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['냉동고기','된장','두부','감자','대파'],
+    steps:['고기 해동+볶기','된장 풀기','두부+감자 넣고 끓이기','대파 올리기'] },
+
+  // 🥗 특별 반찬
+  { name:'아보카도 계란 토스트', emoji:'🥑', type:'단품', time:'7분', difficulty:'쉬움',
+    mealTypes:['아침','간식'],
+    ingredients:['계란'],
+    steps:['계란 수란 만들기','빵 굽기','계란 올리고 소금+후추'] },
+
+  { name:'토마토 스크램블', emoji:'🍅', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['토마토','계란','마늘'],
+    steps:['토마토 깍둑썰기','마늘 볶다 토마토 넣기','계란 넣고 스크램블'] },
+
+  { name:'버섯 베이컨 볶음', emoji:'🍄', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','술안주'],
+    ingredients:['버섯','베이컨','마늘'],
+    steps:['버섯+베이컨 썰기','마늘 볶다 재료 넣기','소금+후추 간하기'] },
+
+  { name:'파프리카 계란볶음', emoji:'🫑', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['파프리카','계란','양파'],
+    steps:['파프리카+양파 썰기','팬에 볶다 계란 넣기','소금으로 간하기'] },
+
+  { name:'두부 스크램블 덮밥', emoji:'🟨', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['두부','계란','간장','대파'],
+    steps:['두부 으깨기','계란+간장 넣고 볶기','밥 위에 올리고 대파 뿌리기'] },
+
+  { name:'냉동옥수수 계란볶음', emoji:'🌽', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['냉동옥수수','계란'],
+    steps:['옥수수 팬에 볶기','계란 넣고 스크램블','소금으로 간하기'] },
+
+  { name:'참치 두부 덮밥', emoji:'🐟', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['참치캔','두부','간장','마요네즈'],
+    steps:['두부 굽기','참치+마요네즈+간장 버무리기','밥+두부+참치 올리기'] },
+
+  { name:'소고기 계란 덮밥', emoji:'🥩', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['소고기','계란','간장','양파'],
+    steps:['소고기+양파 간장으로 볶기','계란 반숙으로 올리기','밥 위에 올리기'] },
+
+  { name:'김치 계란볶음밥', emoji:'🍳', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심','야식'],
+    ingredients:['김치','계란','대파'],
+    steps:['김치 볶기','계란 스크램블 만들기','밥 넣고 대파와 함께 볶기'] },
+
+  { name:'버섯 볶음밥', emoji:'🍄', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['버섯','계란','간장','대파'],
+    steps:['버섯 볶기','계란+밥 넣고 볶기','간장+대파로 마무리'] },
+
+  { name:'베이컨 볶음밥', emoji:'🥓', type:'단품', time:'10분', difficulty:'쉬움',
+    mealTypes:['아침','점심'],
+    ingredients:['베이컨','계란','양파'],
+    steps:['베이컨+양파 볶기','계란+밥 넣고 볶기','소금+후추로 간하기'] },
+
+  { name:'돼지고기 볶음밥', emoji:'🥩', type:'단품', time:'12분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['돼지고기','김치','계란'],
+    steps:['돼지고기 볶기','김치 넣고 함께 볶기','계란+밥 넣고 볶기'] },
+
+  { name:'새우 마늘볶음', emoji:'🦐', type:'반찬', time:'10분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','술안주'],
+    ingredients:['냉동새우','마늘','대파'],
+    steps:['새우 해동','마늘+대파 볶기','새우 넣고 볶기','소금으로 간하기'] },
+
+  { name:'감자 수프', emoji:'🥔', type:'단품', time:'25분', difficulty:'보통',
+    mealTypes:['아침','점심'],
+    ingredients:['감자','양파','우유'],
+    steps:['감자+양파 볶기','우유+물 붓고 끓이기','블렌더로 갈기','소금으로 간하기'] },
+
+  { name:'냉동만두 찜', emoji:'🥟', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁','간식'],
+    ingredients:['냉동만두'],
+    steps:['찜기에 물 끓이기','만두 넣기','15분 찌기'] },
+
+  { name:'두부 강된장', emoji:'🟨', type:'반찬', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['두부','된장','양파','마늘','대파'],
+    steps:['두부+양파 깍둑썰기','된장+마늘 볶기','두부+양파 넣고 조리기','대파 올리기'] },
+
+  { name:'고추 계란볶음', emoji:'🌶', type:'반찬', time:'7분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['고추','계란','간장'],
+    steps:['고추 어슷썰기','팬에 볶기','계란 넣고 스크램블','간장으로 간하기'] },
+
+  { name:'양파 수프', emoji:'🧅', type:'단품', time:'20분', difficulty:'보통',
+    mealTypes:['아침','점심'],
+    ingredients:['양파','우유'],
+    steps:['양파 채썰어 캐러멜라이즈','우유+물 붓고 끓이기','소금+후추로 간하기'] },
+
+  { name:'김치 수제비', emoji:'🥣', type:'단품', time:'20분', difficulty:'보통',
+    mealTypes:['점심','저녁','야식'],
+    ingredients:['김치','양파','대파'],
+    steps:['김치+양파 볶기','물 붓고 끓이기','반죽 뜯어 넣기','대파 올리기'] },
+
+  { name:'참치 야채죽', emoji:'🍚', type:'단품', time:'25분', difficulty:'쉬움',
+    mealTypes:['아침'],
+    ingredients:['참치캔','당근','양파','간장'],
+    steps:['당근+양파 잘게 썰기','쌀+물 넣고 끓이기','참치+야채 넣고 끓이기','간장으로 간하기'] },
+
+  { name:'소고기 야채죽', emoji:'🍚', type:'단품', time:'30분', difficulty:'쉬움',
+    mealTypes:['아침'],
+    ingredients:['소고기','당근','양파','간장'],
+    steps:['소고기+야채 잘게 썰기','참기름에 볶기','쌀+물 넣고 끓이기','간장으로 간하기'] },
+
+  { name:'냉동새우 볶음 덮밥', emoji:'🦐', type:'단품', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['냉동새우','양파','마늘','간장'],
+    steps:['새우 해동','마늘+양파 볶기','새우 넣고 간장으로 볶기','밥 위에 올리기'] },
+
+  { name:'스팸 두부 찌개', emoji:'🥘', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['점심','저녁'],
+    ingredients:['스팸','두부','대파','고추장'],
+    steps:['스팸+두부 썰기','고추장 육수 끓이기','재료 넣고 끓이기','대파 올리기'] },
+
+  { name:'버섯 두부 된장국', emoji:'🍲', type:'세트', time:'15분', difficulty:'쉬움',
+    mealTypes:['아침','점심','저녁'],
+    ingredients:['버섯','두부','된장','대파'],
+    steps:['버섯+두부 손질','된장 육수 끓이기','재료 넣고 끓이기','대파 올리기'] },
+];
+
+// ── MEAL TIME CONFIRM ──
+function confirmMealTime() {
+  const current = state.mealType;
+  const options = ['아침','점심','저녁','간식','야식','술안주'];
+  const emojis = {'아침':'🌅','점심':'☀️','저녁':'🌙','간식':'🍪','야식':'🌃','술안주':'🍺'};
+  
+  const msg = `지금 ${emojis[current]} ${current} 맞아?\n아니면 위에서 다시 선택해줘!`;
+  if (confirm(msg)) {
+    getSuggestions();
+  }
+}
+
+// ── SUGGESTION ENGINE ──
+function getSuggestions() {
+  const allIngredients = [...state.coldSelected, ...state.freezeSelected];
+  if (allIngredients.length === 0) {
+    showToast('재료를 하나라도 골라봐! 🥕');
+    return;
+  }
+
+  showView('result-view');
+  document.getElementById('result-title').textContent = `${state.mealType} 추천 메뉴 🍽️`;
+
+  const recentNames = state.history.slice(-10).map(h => h.name);
+
+  const scored = RECIPES
+    .filter(r => r.mealTypes.includes(state.mealType))
+    .filter(r => !recentNames.includes(r.name))
+    .map(r => {
+      const matched = r.ingredients.filter(ing => allIngredients.includes(ing));
+      const missing = r.ingredients.filter(ing => !allIngredients.includes(ing));
+      const score = matched.length / r.ingredients.length;
+      return { ...r, score, matched, missing };
+    })
+    .filter(r => r.score >= 0.7)
+    .sort((a, b) => b.score - a.score);
+
+  const top = scored.slice(0, 10);
+  top.sort(() => Math.random() - 0.5);
+  const results = top.slice(0, 3);
+
+  if (results.length === 0) {
+    document.getElementById('result-content').innerHTML = `
+      <div class="error-box" style="background:#FFF9F0;border-color:#FFE0B2;color:#E65100;">
+        🤔 선택한 재료로 만들 수 있는 메뉴가 없어<br>
+        <small>재료를 더 추가해봐!</small>
+      </div>
+    `;
+    return;
+  }
+
+  renderMenus(results);
+}
+
+function renderMenus(menus) {
+  const html = menus.map(menu => `
+    <div class="menu-card" onclick="toggleRecipe(this, '${menu.name.replace(/'/g,"\\'")}')">
+      <div class="menu-card-header">
+        <div class="menu-emoji">${menu.emoji}</div>
+        <div class="menu-info">
+          <div class="menu-name">${menu.name}</div>
+          <div class="menu-tags">
+            <span class="menu-tag tag-time">⏱ ${menu.time}</span>
+            <span class="menu-tag tag-diff">${menu.difficulty}</span>
+            <span class="menu-tag tag-type">${menu.type}</span>
+          </div>
+        </div>
+        <button onclick="event.stopPropagation(); eatThis('${menu.name.replace(/'/g,"\\'")}', '${menu.emoji}')" 
+          style="background:var(--orange);color:#fff;border:none;border-radius:12px;padding:6px 10px;font-size:0.78rem;cursor:pointer;font-weight:700;white-space:nowrap;">
+          먹었어 ✓
+        </button>
+      </div>
+      <div class="menu-card-body" style="display:none;">
+        <ol class="recipe-steps">
+          ${menu.steps.map((s,i) => `
+            <li class="recipe-step">
+              <div class="step-num">${i+1}</div>
+              <div>${s}</div>
+            </li>
+          `).join('')}
+        </ol>
+        <div class="ingredients-used">
+          <strong>사용 재료:</strong> ${menu.matched ? menu.matched.join(', ') : menu.ingredients.join(', ')}
+          ${menu.missing && menu.missing.length > 0 ? `<br><span style="color:#E65100;">✚ 있으면 좋아: ${menu.missing.join(', ')}</span>` : ''}
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  document.getElementById('result-content').innerHTML = `
+    <p style="font-size:0.82rem;color:var(--gray);margin-bottom:8px;">👆 카드 눌러서 조리법 확인</p>
+    <div style="display:flex;flex-direction:column;gap:10px;">${html}</div>
+    <button class="cta-btn" style="margin-top:8px;" onclick="getSuggestions()">
+      🔄 다른 메뉴 추천받기
+    </button>
+  `;
+}
+
+function toggleRecipe(card, name) {
+  const body = card.querySelector('.menu-card-body');
+  const isOpen = body.style.display !== 'none';
+  body.style.display = isOpen ? 'none' : 'block';
+}
+
+function eatThis(name, emoji) {
+  addToHistory({ name, emoji });
+  showToast(`${emoji} ${name} 맛있게 먹어! 🙏`);
+}
+
+// ── SERVICE WORKER ──
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(() => {});
+}
+
+// ── TOAST ──
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+</script>
+</body>
+</html>
